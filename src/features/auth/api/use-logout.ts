@@ -24,6 +24,7 @@ export const useLogout = () => {
       // 刷新页面
       router.refresh();
       queryClient.invalidateQueries({ queryKey: ["current"] });
+      queryClient.invalidateQueries({ queryKey: ["workspaces"] });
     },
     onError: () => {
       toast.error("Failed to logged out");
