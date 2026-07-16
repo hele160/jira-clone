@@ -27,7 +27,7 @@ const app = new Hono().post(
         image,
       );
 
-      const arrayBuffer = await storage.getFilePreview(
+      const arrayBuffer = await storage.getFileView(
         IMAGES_BUCKET_ID,
         file.$id,
       );
@@ -42,7 +42,7 @@ const app = new Hono().post(
       {
         name,
         userId: user.$id,
-        imageUrl: uploadedImageUrl,
+        imageURL: uploadedImageUrl,
       },
     );
 
