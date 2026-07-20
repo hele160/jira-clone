@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
 
-import { getCurrent } from "@/features/auth/actions";
+import { getCurrent } from "@/features/auth/queries";
 const WorkspaceIdPage = async () => {
   // 检查登录
   const user = await getCurrent();
